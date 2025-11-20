@@ -34,6 +34,7 @@ body {
     margin: 0 auto;
     padding: 1rem;
     min-height: 100vh;
+    position: relative;
 }
 
 /* Laptop and Desktop Layout */
@@ -44,24 +45,12 @@ body {
     }
 }
 
-/* Header */
-header {
-    text-align: center;
-    padding: 2rem 1rem 1.5rem;
-    background: var(--card-bg);
-    color: var(--text-primary);
-    margin: -1rem -1rem 1.5rem -1rem;
-    border-radius: 0 0 1.5rem 1.5rem;
-    position: relative;
-    border-bottom: 2px solid var(--border-color);
-}
-
 .theme-toggle {
-    position: absolute;
+    position: fixed;
     top: 1rem;
     right: 1rem;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
     border-radius: 50%;
     width: 44px;
     height: 44px;
@@ -70,15 +59,15 @@ header {
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    box-shadow: var(--shadow-lg);
 }
 
 .theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
     transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .theme-toggle:active {
@@ -93,17 +82,6 @@ header {
 
 .theme-toggle:hover .theme-icon {
     transform: rotate(15deg);
-}
-
-header h1 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.subtitle {
-    font-size: 0.9rem;
-    opacity: 0.9;
 }
 
 /* Current Status Card */
@@ -472,14 +450,6 @@ header h1 {
         padding: 2rem;
     }
 
-    header {
-        margin: -2rem -2rem 2rem -2rem;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
     .flight-card {
         padding: 1.5rem;
     }
@@ -499,19 +469,6 @@ header h1 {
 
 /* Laptop and Desktop Enhancements */
 @media (min-width: 1024px) {
-    header {
-        padding: 3rem 2rem 2rem;
-        margin: -2rem -2rem 2.5rem -2rem;
-    }
-
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    .subtitle {
-        font-size: 1.1rem;
-    }
-
     .current-status {
         margin-bottom: 2rem;
     }
@@ -598,20 +555,16 @@ body.dark-mode {
     --border-color: #334155;
 }
 
-body.dark-mode header {
-    background: var(--card-bg);
-    border-bottom-color: var(--border-color);
-}
 
 body.dark-mode .theme-toggle {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--border-color);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 body.dark-mode .theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--primary-color);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
