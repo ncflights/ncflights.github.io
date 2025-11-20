@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flight Schedule Tracker - See where I am">
+    <title>Flight Schedule</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <h1>Nora's Flight Schedule ✈️ </h1>
+        </header>
+
+        <div class="map-section">
+            <h2 class="section-title">Flight Routes Map</h2>
+            <div id="flightMap"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn active" data-filter="upcoming">Upcoming</button>
+        </div>
+
+        <div class="timezone-controls">
+            <span class="timezone-label">Timezone:</span>
+            <button class="btn-timezone active" data-timezone="local">Local</button>
+            <button class="btn-timezone" data-timezone="EST">EST</button>
+            <button class="btn-timezone" data-timezone="PST">PST</button>
+        </div>
+
+        <div class="flights-container" id="flightsContainer">
+            <!-- Flights will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
