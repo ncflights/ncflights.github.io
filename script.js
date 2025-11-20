@@ -2,8 +2,10 @@
 // Add more airports as needed
 const airportCoordinates = {
     'FLL': [26.0712, -80.1528],      // Fort Lauderdale
-    'SJU': [18.4394, -66.0018],      // San Juan, Puerto Rico
+    'MCO': [28.4312, -81.3083],      // Orlando
+    'EWR': [40.6895, -74.1745],      // Newark
     'SFO': [37.6213, -122.3790],     // San Francisco
+    'SJU': [18.4394, -66.0018],      // San Juan, Puerto Rico
     'JFK': [40.6413, -73.7781],      // New York JFK
     'LAX': [33.9425, -118.4081],     // Los Angeles
     'ORD': [41.9742, -87.9073],      // Chicago O'Hare
@@ -88,6 +90,103 @@ const flights = [
             code: 'FLL',
             name: 'Fort Lauderdale',
             time: '06:37',  // Will display as "6:37 AM" (next day)
+            nextDay: true   // Indicates arrival is next day
+        },
+        status: 'upcoming'
+    },
+    {
+        id: 5,
+        flightNumber: 'NK 466',
+        date: '2024-12-06',  // Sat, 6 Dec
+        departure: {
+            code: 'FLL',
+            name: 'Fort Lauderdale',
+            time: '06:40'  // Will display as "6:40 AM"
+        },
+        arrival: {
+            code: 'MCO',
+            name: 'Orlando',
+            time: '07:45'  // Will display as "7:45 AM"
+        },
+        status: 'upcoming'
+    },
+    {
+        id: 6,
+        flightNumber: 'NK 1894',
+        date: '2024-12-07',  // Sun, 7 Dec
+        departure: {
+            code: 'MCO',
+            name: 'Orlando',
+            time: '06:39'  // Will display as "6:39 AM"
+        },
+        arrival: {
+            code: 'FLL',
+            name: 'Fort Lauderdale',
+            time: '07:55'  // Will display as "7:55 AM"
+        },
+        status: 'upcoming'
+    },
+    {
+        id: 7,
+        flightNumber: 'NK 134',
+        date: '2024-12-12',  // Fri, 12 Dec
+        departure: {
+            code: 'FLL',
+            name: 'Fort Lauderdale',
+            time: '20:54'  // Will display as "8:54 PM"
+        },
+        arrival: {
+            code: 'EWR',
+            name: 'Newark',
+            time: '23:52'  // Will display as "11:52 PM"
+        },
+        status: 'upcoming'
+    },
+    {
+        id: 8,
+        flightNumber: 'NK 450',
+        date: '2024-12-14',  // Sun, 14 Dec
+        departure: {
+            code: 'EWR',
+            name: 'Newark',
+            time: '05:46'  // Will display as "5:46 AM"
+        },
+        arrival: {
+            code: 'FLL',
+            name: 'Fort Lauderdale',
+            time: '08:57'  // Will display as "8:57 AM"
+        },
+        status: 'upcoming'
+    },
+    {
+        id: 9,
+        flightNumber: 'UA 249',
+        date: '2024-12-22',  // Mon, 22 Dec
+        departure: {
+            code: 'FLL',
+            name: 'Fort Lauderdale',
+            time: '17:10'  // Will display as "5:10 PM"
+        },
+        arrival: {
+            code: 'SFO',
+            name: 'San Francisco',
+            time: '20:44'  // Will display as "8:44 PM"
+        },
+        status: 'upcoming'
+    },
+    {
+        id: 10,
+        flightNumber: 'B6 378',
+        date: '2024-12-28',  // Sun, 28 Dec
+        departure: {
+            code: 'SFO',
+            name: 'San Francisco',
+            time: '23:59'  // Will display as "11:59 PM"
+        },
+        arrival: {
+            code: 'FLL',
+            name: 'Fort Lauderdale',
+            time: '08:17',  // Will display as "8:17 AM" (next day)
             nextDay: true   // Indicates arrival is next day
         },
         status: 'upcoming'
